@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% if user.is_authenticated %}
+        <p>Hi {{ user.username }}!</p>
+        {% endif %}
+    <meta charset="utf-8" />
+    <title>Модели в Django</title>
+</head>
+<body class="container">
+    <form method="POST" action="index/">
+        {% csrf_token %}
+        <p>
+            <label>Введите имя</label><br>
+            <input type="text" name="name" />
+        </p>
+        <p>
+            <label>Введите имя</label><br>
+            <input type="text" name="author" />
+        </p>
+        <p>
+            <label>Введите возраст</label><br>
+            <input type="number" name="number" />
+        </p>
+        <input type="submit" value="Сохранить" >
+    </form>
+    
+</html>
