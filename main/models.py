@@ -1,12 +1,6 @@
-from tabnanny import verbose
 from django.db import models
 
 
-class book(models.Model):
-    name = models.CharField('name', max_length=5)
-    author = models.CharField('author', max_length=5)
-    number = models.CharField('number', max_length=5)
-
-    class Meta:
-        verbose_name = 'book'
+class Name(models.Model):
+    name = models.CharField(max_length=100)
 
